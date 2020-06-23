@@ -4,7 +4,7 @@ const { RESPONSE_FIELDS } = require('../consts');
 
 const router = new Router();
 
-router.get('/id/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   const { id } = req.params;
   const card = await db.Card.findOne({
     attributes: RESPONSE_FIELDS.CARD,
@@ -15,7 +15,7 @@ router.get('/id/:id', async (req, res) => {
   res.json(card);
 });
 
-router.get('/all', async (req, res) => {
+router.get('/', async (req, res) => {
   const card = await db.Card.findAll();
   res.json(card);
 });

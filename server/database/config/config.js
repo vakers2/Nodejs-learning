@@ -5,14 +5,20 @@ module.exports = {
     dialect: 'sqlite',
     storage: process.env.STORAGE,
     define: {
-      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      updatedAt: 'updated_at',
+      createdAt: 'created_at',
     },
   },
   production: {
     dialect: 'sqlite',
     storage: process.env.STORAGE,
     define: {
-      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      updatedAt: 'updated_at',
+      createdAt: 'created_at',
     },
   },
 };
