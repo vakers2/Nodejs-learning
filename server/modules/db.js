@@ -19,3 +19,5 @@ Object.values(db.models)
   .forEach((model) => model.associate(db.models));
 
 module.exports = { client: db, ...db.models };
+
+//test comment
